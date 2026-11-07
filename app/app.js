@@ -261,6 +261,8 @@ function viewVideo(video) {
     thumbnailImg.style.display = 'none';
   } else {
     thumbnailImg.style.display = 'block';
+    // NOTE: this is for using cache busting
+    // thumbnailImg.src = `${video.thumbnail_url}?v=${Date.now().toString()}`;
     thumbnailImg.src = video.thumbnail_url;
   }
 
